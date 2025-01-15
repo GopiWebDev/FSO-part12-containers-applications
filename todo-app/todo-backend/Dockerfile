@@ -1,12 +1,12 @@
 FROM node
 
-WORKDIR /usr/src/app/
+WORKDIR /usr/src/app/backend
 
 COPY --chown=node:node . .
 
 RUN npm ci --omit=dev
 
-ENV DEBUG=app:*
+ENV DEBUG=backend:*
 
 USER node
 

@@ -10,4 +10,4 @@ ENV DEBUG=app:*
 
 USER node
 
-CMD npm start
+CMD ["npm", "start"]
