@@ -1,0 +1,83 @@
+Script started on 2025-01-16 12:00:32+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="129" LINES="23"]
+# mongosh -u root -p - example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6788f4ede39020b78de94969
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.4[0m
+Using MongoDB:		8.0.4
+[1m[33mUsing Mongosh[0m:		2.3.4
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2025-01-16T11:48:58.608+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2025-01-16T11:48:59.419+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2025-01-16T11:48:59.419+00:00: We suggest setting the contents of sysfsFile to 0.
+   2025-01-16T11:48:59.419+00:00: Your system has glibc support for rseq built in, which is not yet supported by tcmalloc-google and has critical performance implications. Please set the environment variable GLIBC_TUNABLES=glibc.pthread.rseq=0
+   2025-01-16T11:48:59.419+00:00: vm.max_map_count is too low
+   2025-01-16T11:48:59.419+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow oc[1G[0Jthe_database> show o[21G[1G[0Jthe_database> show [20Gcollections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.fid[1G[0Jthe_database> db.todos.fi[26Gnd({})
+[
+  {
+    _id: ObjectId([32m'6787f625ba0aa72484e9496a'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6787f625ba0aa72484e9496b'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'6787f635e86f0540884904cc'[39m),
+    text: [32m'Testing with Docker'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.find({})[32G[1G[0Jthe_database> db.todos.find({}[31G[1G[0Jthe_database> db.todos.find({[30G[1G[0Jthe_database> db.todos.find([29G[1G[0Jthe_database> db.todos.find[28G[1G[0Jthe_database> db.todos.fin[27G[1G[0Jthe_database> db.todos.fi[26G[1G[0Jthe_database> db.todos.f[25G[1G[0Jthe_database> db.todos.[24GinsertOne({}[1G[0Jthe_database> db.todos.insertOne({[35Gtetx[1G[0Jthe_database> db.todos.insertOne({tet[38G[1G[0Jthe_database> db.todos.insertOne({te[37Gxt[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone: [32m"[39m[32mf[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [32m"[39m[96G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [95Gfals[33mfalse[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6788f54ee39020b78de9496a'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my tool belt"[39m, [33mdone[39m: [33mfalse[39m})[102G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6787f625ba0aa72484e9496a'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6787f625ba0aa72484e9496b'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'6787f635e86f0540884904cc'[39m),
+    text: [32m'Testing with Docker'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId([32m'6788f54ee39020b78de9496a'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15G[1G[0Jthe_database> [15G[1G[0Jthe_database> [15G[1G[0Jthe_database> [15G
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+[1G[0Jthe_database> [15G
+# clear
+[H[2J[3J# exit
+
+Script done on 2025-01-16 13:26:44+00:00 [COMMAND_EXIT_CODE="0"]
